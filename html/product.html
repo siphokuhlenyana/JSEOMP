@@ -16,7 +16,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">  <a href="../index.html"><img id="image" src="https://siphokuhlenyana.github.io/ImagesPortfolio/AEDC.png" width="200px" height="200px"></a>            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link " aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./about.html">About</a>
@@ -24,7 +24,7 @@
 
               
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="./product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link active dropdown-toggle" href="./product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Products
                 </a>
                 <ul class="dropdown-menu">
@@ -65,24 +65,56 @@
       
 
     </nav>
-
     <main id="Products">
       
 <h1 id="heading"></h1>
 <div id="buttons">
-      <button id="sort"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-alpha-down" viewBox="0 0 16 16">
+  
+  <button id="search" type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    Category<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+      <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/>
+    </svg><span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+      <li id="dresses" class="dropdown-item" >Dresses</li>
+      <li id="kitchen" class="dropdown-item" >KitchenWare</li>
+      
+    </ul>
+
+  
+  <button id="sort" type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-alpha-down" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371zm1.57-.785L11 2.687h-.047l-.652 2.157z"/>
+      <path d="M12.96 14H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293z"/>
+    </svg><span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li id="name" class="dropdown-item" >Name</li>
+    <li id="ctgry" class="dropdown-item" >Category </li>
+    
+  </ul>
+</div>
+
+<div id="display">
+  
+</div>
+
+
+
+
+      <!-- <button id="sort"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-alpha-down" viewBox="0 0 16 16"data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
         <path fill-rule="evenodd" d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371zm1.57-.785L11 2.687h-.047l-.652 2.157z"/>
         <path d="M12.96 14H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293z"/>
-      </svg></button><input type="text" id="searchItems" placeholder="What are you looking for ?"><button id="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+      </svg>
+    </button><button id="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
         <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
         <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
-      </svg></button>
+      </svg></button> -->
 <!-- <div id="show">
    <img id="create" src="https://siphokuhlenyana.github.io/ImagesPortfolio/IMG_0574.jpeg" alt="" width="300px" height="200px">
       <img id="create1" src="https://siphokuhlenyana.github.io/ImagesPortfolio/IMG_0570%20(1).jpeg" alt="" width="300px" height="200px">
 </div> -->
      
-</div>
 <div id="prod">
 
 
